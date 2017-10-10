@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="treeViewerApp">
+<head>
+    <meta charset="utf-8">
+    <title>Tree viewer</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="tree-viewer/tree-viewer.module.js"></script>
+    <script src="tree-viewer/tree-viewer.component.js"></script>
+</head>
+<body>
+
+    <div class="view-container">
+        <div ng-view class="view-frame" ng-hide="false" ng-show="treeViewer">
+            <tree-viewer></tree-viewer>
+        </div>
+    </div>
+
+</body>
+</html>
