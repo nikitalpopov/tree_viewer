@@ -1,2 +1,16 @@
 <h1>Tree viewer</h1>
-<pre class="tree-viewer">{{$ctrl.tree | json}}</pre>
+
+<div class="tree-viewer">
+    <ul>
+        <li ng-repeat="data in $ctrl.tree" ng-include="'tree_item_renderer.html'"></li>
+    </ul>
+
+    <script type="text/ng-template"  id="tree_item_renderer.html">
+        {{data.text}}
+        <ul>
+            <li ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
+        </ul>
+    </script>
+
+    <pre>{{$ctrl.tree | json}}</pre>
+</div>

@@ -9,14 +9,8 @@ angular
                 $http
                     .get(url)
                     .then(function (response) {
-                        self.tree = response.data;
+                        self.tree = [response.data];
                     });
-
-                self.drawTree = function drawTree(tree) {
-                    for (var node in tree['children']) {
-                        // ?
-                    }
-                }
             }
         }
     );
