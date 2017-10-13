@@ -21,13 +21,14 @@ li {
 
 .node-wrapper {
     display: inline-block;
-    min-width: 200px;
+    min-width: 220px;
     width: 20vw;
     text-align: left;
 }
 
 .node {
     min-height: 35px;
+    max-width: calc(100% - 50px);
     margin: 8px;
     overflow: visible;
     white-space: normal;
@@ -36,6 +37,15 @@ li {
 
 .glyphicon {
     font-size: 10px;
+}
+
+.branch.ng-hide {
+    opacity: 0;
+}
+
+.branch {
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
 }
 
 .tree-text {

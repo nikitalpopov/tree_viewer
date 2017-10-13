@@ -8,19 +8,17 @@
         </ul>
 
         <script type="text/ng-template"  id="tree_item_renderer.html">
-            <div>
-                <div class="node-wrapper">
-                    <button type="button" class="node btn btn-default btn-xs" ng-click="node = !node">
-                        {{data.text}}
-                        <a class="btn btn-sm" ng-show="data.children.length > 0">
-                            <span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span>
-                        </a>
-                    </button>
-                </div>
-                <ul ng-hide="node" ng-if="data.children.length > 0">
-                    <li ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
-                </ul>
+            <div class="node-wrapper">
+                <button type="button" class="node btn btn-default btn-xs">
+                    {{data.text}}
+                </button>
+                <a class="trigger btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
+                    <span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span>
+                </a>
             </div>
+            <ul class="branch" ng-hide="node" ng-if="data.children.length > 0">
+                <li  ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
+            </ul>
         </script>
 
     </div>
