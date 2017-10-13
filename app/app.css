@@ -3,3 +3,27 @@
 body {
     padding: 20px;
 }
+
+.tree {
+
+}
+
+ul {
+    vertical-align: middle;
+    list-style: none;
+    display: inline-block;
+    /*width: 100%;*/
+    /*table-layout: fixed;*/
+}
+
+ul li {
+    width: auto;
+    /*text-align: center;*/
+}
+.node {
+    margin: 10px;
+}
+
+.glyphicon {
+    font-size: 10px;
+}

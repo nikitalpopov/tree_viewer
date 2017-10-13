@@ -1,18 +1,22 @@
 <h1>Tree viewer</h1>
 
 <div class="tree-viewer">
-    <a class="btn btn-sm" ng-click="node = !node">hide <span class="glyphicon" ng-class="{'glyphicon-chevron-right': node, 'glyphicon-chevron-down': !node}"></span></a>
-    <ul class="list-group" ng-hide="node">
-        <li class="list-group-item" ng-repeat="data in $ctrl.tree" ng-include="'tree_item_renderer.html'"></li>
-    </ul>
-
-    <script type="text/ng-template"  id="tree_item_renderer.html">
-        {{data.text}}
-        <a class="btn btn-sm" ng-click="node = !node" ng-show="data.children.length > 0"><span class="glyphicon" ng-class="{'glyphicon-chevron-right': node, 'glyphicon-chevron-down': !node}"></span></a>
-        <ul class="list-group" ng-hide="node" ng-if="data.children.length > 0">
-            <li class="list-group-item" ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
+    <div class="tree">
+        <!--<a class="btn btn-sm" ng-click="node = !node">hide <span class="glyphicon" ng-class="{'glyphicon-chevron-right': !node, 'glyphicon-chevron-down': node}"></span></a>-->
+        <ul ng-hide="node">
+            <li ng-repeat="data in $ctrl.tree" ng-include="'tree_item_renderer.html'"></li>
         </ul>
-    </script>
+
+        <script type="text/ng-template"  id="tree_item_renderer.html">
+            <button type="button" class="btn btn-default btn-xs node" ng-click="node = !node">
+                {{data.text}}
+                <a class="btn btn-sm" ng-show="data.children.length > 0"><span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span></a>
+            </button>
+            <ul ng-hide="node" ng-if="data.children.length > 0">
+                <li ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
+            </ul>
+        </script>
+    </div>
 
     <pre>{{$ctrl.tree | json}}</pre>
 </div>
