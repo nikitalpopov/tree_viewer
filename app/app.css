@@ -2,6 +2,10 @@ body {
     padding: 20px;
 }
 
+.tree {
+    overflow-y: auto;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -13,17 +17,27 @@ ul {
 li {
     white-space: nowrap;
     text-overflow: ellipsis;
-    line-height: 40px;
+}
+
+.node-wrapper {
+    display: inline-block;
+    min-width: 200px;
+    width: 20vw;
+    text-align: left;
 }
 
 .node {
-    max-width: 300px;
     min-height: 35px;
+    margin: 8px;
     overflow: visible;
     white-space: normal;
-    margin: 8px;
+    text-align: justify;
 }
 
 .glyphicon {
     font-size: 10px;
+}
+
+.tree-text {
+    padding-top: 10px;
 }
