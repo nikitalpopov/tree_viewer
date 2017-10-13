@@ -1,27 +1,27 @@
-/* app css stylesheet */
-
 body {
     padding: 20px;
 }
 
-.tree {
-
-}
-
 ul {
-    vertical-align: middle;
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: inline-block;
-    /*width: 100%;*/
-    /*table-layout: fixed;*/
+    vertical-align: middle;
 }
 
-ul li {
-    width: auto;
-    /*text-align: center;*/
+li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 40px;
 }
+
 .node {
-    margin: 10px;
+    max-width: 300px;
+    min-height: 35px;
+    overflow: visible;
+    white-space: normal;
+    margin: 8px;
 }
 
 .glyphicon {

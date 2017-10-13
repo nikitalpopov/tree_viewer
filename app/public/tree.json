@@ -1,14 +1,14 @@
 {
-  "text": "text",
+  "text": "item 1",
   "children": [
     {
-      "text": "text",
+      "text": "sub item 1.1",
       "children": [
         {
-          "text": "text",
+          "text": "sub sub item 1.1.1",
           "children": [
             {
-              "text": "text",
+              "text": "sub sub sub item 1.1.1.1",
               "children": []
             }
           ]
@@ -16,24 +16,33 @@
       ]
     },
     {
-      "text": "text",
+      "text": "sub item 1.2 with long long long long long text",
       "children": [
         {
-          "text": "text",
+          "text": "sub sub item 1.2.1",
           "children": []
         },
         {
-          "text": "text",
+          "text": "sub sub item 1.2.2",
           "children": []
         }
       ]
     },
     {
-      "text": "text",
+      "text": "sub item 1.3",
       "children": [
         {
-          "text": "text",
-          "children": []
+          "text": "sub sub item 1.3.1 with long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long text",
+          "children": [
+            {
+              "text": "sub sub sub item 1.3.1.1",
+              "children": []
+            },
+            {
+              "text": "sub sub sub item 1.3.1.2",
+              "children": []
+            }
+          ]
         }
       ]
     }

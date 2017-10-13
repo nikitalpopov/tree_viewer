@@ -10,7 +10,7 @@
         <script type="text/ng-template"  id="tree_item_renderer.html">
             <button type="button" class="btn btn-default btn-xs node" ng-click="node = !node">
                 {{data.text}}
-                <a class="btn btn-sm" ng-show="data.children.length > 0"><span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span></a>
+                <a class="btn btn-sm icon" ng-show="data.children.length > 0"><span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span></a>
             </button>
             <ul ng-hide="node" ng-if="data.children.length > 0">
                 <li ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
