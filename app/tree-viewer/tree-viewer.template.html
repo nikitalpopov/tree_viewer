@@ -9,10 +9,10 @@
 
         <script type="text/ng-template"  id="tree_item_renderer.html">
             <div class="node-wrapper">
-                <button type="button" class="node btn btn-default btn-xs">
+                <a class="node btn btn-default btn-sm disabled" role="button">
                     {{data.text}}
-                </button>
-                <a class="trigger btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
+                </a>
+                <a class="btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
                     <span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span>
                 </a>
             </div>

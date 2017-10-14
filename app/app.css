@@ -2,10 +2,6 @@ body {
     padding: 20px;
 }
 
-.tree {
-    overflow-y: auto;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -19,6 +15,28 @@ li {
     text-overflow: ellipsis;
 }
 
+.glyphicon {
+    font-size: 10px;
+}
+
+.tree {
+    overflow-y: auto;
+}
+
+.branch {
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+}
+
+.branch.ng-hide,
+.branch.ng-show {
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    opacity: 0;
+}
+
 .node-wrapper {
     display: inline-block;
     min-width: 220px;
@@ -27,25 +45,12 @@ li {
 }
 
 .node {
-    min-height: 35px;
+    display: inline-block;
     max-width: calc(100% - 50px);
     margin: 8px;
     overflow: visible;
     white-space: normal;
     text-align: justify;
-}
-
-.glyphicon {
-    font-size: 10px;
-}
-
-.branch.ng-hide {
-    opacity: 0;
-}
-
-.branch {
-    transition: all linear 0.5s;
-    -webkit-transition: all linear 0.5s;
 }
 
 .tree-text {
