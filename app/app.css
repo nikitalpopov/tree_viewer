@@ -3,6 +3,7 @@ body {
 }
 
 ul {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -11,6 +12,7 @@ ul {
 }
 
 li {
+    position: relative;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -20,10 +22,12 @@ li {
 }
 
 .tree {
+    position: relative;
     overflow-y: auto;
 }
 
 .branch {
+    position: relative;
     transition: 0.5s linear all;
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
@@ -36,6 +40,7 @@ li {
 }
 
 .node-wrapper {
+    position: relative;
     display: inline-block;
     min-width: 220px;
     width: 20vw;
@@ -43,30 +48,66 @@ li {
 }
 
 .node {
+    position: relative;
     display: inline-block;
     max-width: calc(100% - 50px);
     margin: 8px;
 }
 
 .node-text {
+    position: relative;
     overflow: visible;
     white-space: normal;
     text-align: justify;
 }
 
-li::before{
-    content: "\2191";
-    position: relative;
+.node-expander {
+    position: absolute;
     display: inline-block;
-    transform: rotate(90deg);
+    top: calc(50% - 1em);
+    right: 0;
+    text-align: center;
 }
 
-li:only-child::after {
+.node-wrapper::before {
+    content: '';
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    width: 8px;
+}
+
+.node:only-child::after {
     display: none;
 }
-li:first-child::after,
-li:last-child::after {
+
+ul::before {
     content: '';
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    left: -8px;
+    width: 8px;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+li:only-child::before {
+    display: none;
+}
+
+li:first-child::before {
+    height: 50%;
+    top: 50%;
+}
+li:last-child::before {
+    height: 50%;
+    bottom: 50%;
 }
 
 .tree-text {

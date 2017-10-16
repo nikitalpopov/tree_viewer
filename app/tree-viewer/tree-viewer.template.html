@@ -14,9 +14,11 @@
                         {{data.text}}
                     </a>
                 </div>
-                <a class="btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
-                    <span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span>
-                </a>
+                <div class="node-expander">
+                    <a class="btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
+                        <span class="glyphicon" ng-class="{'glyphicon-remove': !node, 'glyphicon-plus': node}" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
             <ul class="branch" ng-hide="node" ng-if="data.children.length > 0">
                 <li  ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"></li>
