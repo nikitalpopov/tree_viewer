@@ -27,13 +27,11 @@ li {
     transition: 0.5s linear all;
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
 }
 
 .branch.ng-hide,
 .branch.ng-show {
-    transition: 0.5s linear all;
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
     opacity: 0;
 }
 
@@ -48,9 +46,27 @@ li {
     display: inline-block;
     max-width: calc(100% - 50px);
     margin: 8px;
+}
+
+.node-text {
     overflow: visible;
     white-space: normal;
     text-align: justify;
+}
+
+li::before{
+    content: "\2191";
+    position: relative;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+li:only-child::after {
+    display: none;
+}
+li:first-child::after,
+li:last-child::after {
+    content: '';
 }
 
 .tree-text {
