@@ -77,7 +77,15 @@ li {
     width: 8px;
 }
 
-.node:only-child::after {
+.node::after {
+    content: '';
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    width: calc(20vw - 22px - 100%);
+}
+
+.node-wrapper:only-child::after {
     display: none;
 }
 
