@@ -43,7 +43,7 @@ li {
     position: relative;
     display: inline-block;
     min-width: 220px;
-    width: 20vw;
+    width: 15vw;
     text-align: left;
 }
 
@@ -82,7 +82,8 @@ li {
     position: absolute;
     border: 1px solid black;
     top: 50%;
-    width: calc(20vw - 22px - 100%);
+    min-width: calc(220px - 35px - 100%);
+    width: calc(15vw - 35px - 100%);
 }
 
 .node-wrapper:only-child::after {
