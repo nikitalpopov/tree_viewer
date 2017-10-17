@@ -22,12 +22,11 @@ li {
 }
 
 .tree {
-    position: relative;
+    padding-top: 5px;
     overflow-y: auto;
 }
 
 .branch {
-    position: relative;
     transition: 0.5s linear all;
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
@@ -40,19 +39,17 @@ li {
 }
 
 .node-wrapper {
-    position: relative;
     display: inline-block;
     text-align: left;
 }
 
 .node {
-    position: relative;
     display: inline-block;
     margin: 8px;
+    transform: translateY(-12px);
 }
 
 .node-text {
-    position: relative;
     min-width: calc(5vw - 40px);
     max-width: calc(25vw - 40px);
     overflow: visible;
@@ -61,9 +58,9 @@ li {
 }
 
 .node-expander {
+    position: relative;
     max-width: 1px;
     right: 10px;
-    position: relative;
     display: inline-block;
     top: calc(50% - 1em);
     text-align: center;
@@ -83,10 +80,9 @@ li {
     content: '';
     position: absolute;
     border: 1px solid black;
-    top: 50%;
-    width: 10px;
+    width: 5px;
+    bottom: calc(50% - 14px);
     z-index: -1;
-    /*width: calc(15vw - 35px - 100%);*/
 }
 
 ul::before {
