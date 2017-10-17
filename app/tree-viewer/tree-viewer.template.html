@@ -9,7 +9,7 @@
 
         <script type="text/ng-template"  id="tree_item_renderer.html">
             <div class="node-wrapper">
-                <div class="node">
+                <div class="node" ng-class="{'node-parent': data.children.length > 0}">
                     <a class="node-text btn btn-default btn-sm disabled" role="button">
                         {{data.text}}
                     </a>
