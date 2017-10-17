@@ -42,30 +42,29 @@ li {
 .node-wrapper {
     position: relative;
     display: inline-block;
-    min-width: 220px;
-    width: 15vw;
     text-align: left;
 }
 
 .node {
     position: relative;
     display: inline-block;
-    max-width: calc(100% - 50px);
     margin: 8px;
 }
 
 .node-text {
     position: relative;
+    min-width: calc(5vw - 40px);
+    max-width: calc(25vw - 40px);
     overflow: visible;
     white-space: normal;
     text-align: justify;
 }
 
 .node-expander {
-    position: absolute;
+    position: relative;
     display: inline-block;
     top: calc(50% - 1em);
-    right: 0;
+    left: -5px;
     text-align: center;
 }
 
@@ -82,12 +81,8 @@ li {
     position: absolute;
     border: 1px solid black;
     top: 50%;
-    min-width: calc(220px - 35px - 100%);
-    width: calc(15vw - 35px - 100%);
-}
-
-.node-wrapper:only-child::after {
-    display: none;
+    width: 10px;
+    /*width: calc(15vw - 35px - 100%);*/
 }
 
 ul::before {
@@ -95,8 +90,8 @@ ul::before {
     position: absolute;
     border: 1px solid black;
     top: 50%;
-    left: -8px;
-    width: 8px;
+    left: -12px;
+    width: 12px;
 }
 
 li::before {
