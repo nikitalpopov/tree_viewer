@@ -51,7 +51,6 @@ p {
 .node {
     display: inline-block;
     margin: 8px;
-    /*transform: translateY(-5px);*/
 }
 
 .node-text {
@@ -74,15 +73,6 @@ p {
     text-align: center;
     z-index: 1;
 }
-
-/*.node-parent::after {*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*border: 1px solid grey;*/
-    /*width: 5px;*/
-    /*bottom: calc(50% - 5px);*/
-    /*z-index: -1;*/
-/*}*/
 
 ul::before {
     content: '';
