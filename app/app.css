@@ -1,5 +1,6 @@
 body {
     padding: 20px;
+    font-family: 'Lora', serif;
 }
 
 ul {
@@ -60,9 +61,7 @@ li {
 .node-expander {
     position: relative;
     max-width: 1px;
-    right: 10px;
     display: inline-block;
-    top: calc(50% - 1em);
     text-align: center;
     z-index: 1;
 }
@@ -70,7 +69,7 @@ li {
 .node-wrapper::before {
     content: '';
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid grey;
     top: 50%;
     width: 8px;
     z-index: -1;
@@ -79,7 +78,7 @@ li {
 .node-parent::after {
     content: '';
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid grey;
     width: 5px;
     bottom: calc(50% - 14px);
     z-index: -1;
@@ -88,7 +87,7 @@ li {
 ul::before {
     content: '';
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid grey;
     top: 50%;
     left: -12px;
     width: 12px;
@@ -98,7 +97,7 @@ ul::before {
 li::before {
     content: '';
     position: absolute;
-    border-left: 1px solid black;
+    border-left: 1px solid grey;
     height: 100%;
     z-index: -1;
 }

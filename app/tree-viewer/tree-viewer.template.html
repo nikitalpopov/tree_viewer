@@ -10,13 +10,13 @@
         <script type="text/ng-template"  id="tree_item_renderer.html">
             <div class="node-wrapper">
                 <div class="node" ng-class="{'node-parent': data.children.length > 0}">
-                    <a class="node-text btn btn-default btn-sm disabled" role="button">
+                    <a class="node-text btn btn-default btn-sm">
                         {{data.text}}
                     </a>
                 </div>
                 <div class="node-expander">
-                    <a class="btn btn-sm" type="btn" ng-show="data.children.length > 0"  ng-click="node = !node">
-                        <span class="glyphicon" ng-class="{'fa fa-minus-circle': !node, 'fa fa-plus-circle': node}" aria-hidden="true"></span>
+                    <a ng-show="data.children.length > 0"  ng-click="node = !node">
+                        <span class="glyphicon" ng-class="{'glyphicon-minus-sign': !node, 'glyphicon-plus-sign': node}" aria-hidden="true"></span>
                     </a>
                 </div>
             </div>
