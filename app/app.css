@@ -50,27 +50,28 @@ p {
 
 .node {
     display: inline-block;
+    padding: 0 4px -2px 4px;
     margin: 8px;
 }
 
 .node-text {
-    min-width: calc(5vw - 40px);
-    max-width: calc(25vw - 40px);
+    min-width: 5vw;
+    max-width: 25vw;
     display: inline-block;
     vertical-align: middle;
     overflow: visible;
     white-space: normal;
     word-wrap: break-word;
     text-align: justify;
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 0 4px 1px 4px;
-    /*margin-bottom: 20px;*/
+    margin-bottom: 18px;
+    border-bottom: 2px solid grey;
 }
 
 .node-expander {
-    position: absolute;
-    bottom: calc(50% - 11px);
+    position: relative;
+    bottom: calc(50% - 14px);
+    right: 12px;
+    margin-right: 5px;
     max-width: 1px;
     display: inline-block;
     text-align: center;
@@ -117,7 +118,9 @@ li:first-child::before {
 li:last-child::before {
     border-bottom: 2px solid grey;
     border-radius: 0 0 0 5px;
+    height: calc(50% + 2px);
     bottom: 50%;
+    margin-bottom: -2px;
 }
 
 li:not(:first-child):not(:last-child)::after,
