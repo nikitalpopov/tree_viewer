@@ -18,6 +18,10 @@ li {
     text-overflow: ellipsis;
 }
 
+p {
+    margin: 0;
+}
+
 .glyphicon {
     font-size: 10px;
 }
@@ -47,15 +51,20 @@ li {
 .node {
     display: inline-block;
     margin: 8px;
-    transform: translateY(-12px);
+    /*transform: translateY(-5px);*/
 }
 
 .node-text {
     min-width: calc(5vw - 40px);
     max-width: calc(25vw - 40px);
+    display: inline-block;
+    vertical-align: middle;
     overflow: visible;
     white-space: normal;
     text-align: justify;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 0 4px 1px 4px;
 }
 
 .node-expander {
@@ -75,14 +84,14 @@ li {
     z-index: -1;
 }
 
-.node-parent::after {
-    content: '';
-    position: absolute;
-    border: 1px solid grey;
-    width: 5px;
-    bottom: calc(50% - 14px);
-    z-index: -1;
-}
+/*.node-parent::after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*border: 1px solid grey;*/
+    /*width: 5px;*/
+    /*bottom: calc(50% - 5px);*/
+    /*z-index: -1;*/
+/*}*/
 
 ul::before {
     content: '';

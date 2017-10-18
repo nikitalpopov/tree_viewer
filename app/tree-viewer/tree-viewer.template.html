@@ -10,9 +10,9 @@
         <script type="text/ng-template"  id="tree_item_renderer.html">
             <div class="node-wrapper">
                 <div class="node" ng-class="{'node-parent': data.children.length > 0}">
-                    <a class="node-text btn btn-default btn-sm">
+                    <p class="node-text">
                         {{data.text}}
-                    </a>
+                    </p>
                 </div>
                 <div class="node-expander">
                     <a ng-show="data.children.length > 0"  ng-click="node = !node">
