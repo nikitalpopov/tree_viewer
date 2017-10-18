@@ -60,6 +60,7 @@ p {
     vertical-align: middle;
     overflow: visible;
     white-space: normal;
+    word-wrap: break-word;
     text-align: justify;
     border: 1px solid gray;
     border-radius: 3px;
