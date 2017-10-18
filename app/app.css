@@ -75,15 +75,6 @@ p {
     z-index: 1;
 }
 
-.node-wrapper::before {
-    content: '';
-    position: absolute;
-    border: 1px solid grey;
-    top: 50%;
-    width: 8px;
-    z-index: -1;
-}
-
 /*.node-parent::after {*/
     /*content: '';*/
     /*position: absolute;*/
@@ -96,7 +87,7 @@ p {
 ul::before {
     content: '';
     position: absolute;
-    border: 1px solid grey;
+    border-top: 1px solid grey;
     top: 50%;
     left: -12px;
     width: 12px;
@@ -111,15 +102,30 @@ li::before {
     z-index: -1;
 }
 
+/*li::before {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*border-top: 1px solid grey;*/
+    /*width: 8px;*/
+    /*top: 50%;*/
+    /*z-index: -1;*/
+/*}*/
+
 li:only-child::before {
     display: none;
 }
 
 li:first-child::before {
+    width: 8px;
+    border-top: 1px solid grey;
+    border-radius: 5px 0 0 0;
     height: 50%;
     top: 50%;
 }
 li:last-child::before {
+    width: 8px;
+    border-bottom: 1px solid grey;
+    border-radius: 0 0 0 5px;
     height: 50%;
     bottom: 50%;
 }
