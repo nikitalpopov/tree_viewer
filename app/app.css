@@ -65,10 +65,12 @@ p {
     border: 1px solid gray;
     border-radius: 3px;
     padding: 0 4px 1px 4px;
+    /*margin-bottom: 20px;*/
 }
 
 .node-expander {
-    position: relative;
+    position: absolute;
+    bottom: calc(50% - 11px);
     max-width: 1px;
     display: inline-block;
     text-align: center;
@@ -78,17 +80,17 @@ p {
 ul::before {
     content: '';
     position: absolute;
-    border-top: 1px solid grey;
+    border-top: 2px solid grey;
     top: 50%;
-    left: -17px;
-    width: 17px;
+    left: -12px;
+    width: 12px;
     z-index: -1;
 }
 
 li::before {
     content: '';
     position: absolute;
-    border-left: 1px solid grey;
+    border-left: 2px solid grey;
     height: 100%;
     z-index: -1;
 }
@@ -107,13 +109,13 @@ li:first-child::before {
 }
 
 li:first-child::before {
-    border-top: 1px solid grey;
+    border-top: 2px solid grey;
     border-radius: 5px 0 0 0;
     top: 50%;
 }
 
 li:last-child::before {
-    border-bottom: 1px solid grey;
+    border-bottom: 2px solid grey;
     border-radius: 0 0 0 5px;
     bottom: 50%;
 }
@@ -123,7 +125,7 @@ li:only-child::after {
     content: '';
     position: absolute;
     width: 8px;
-    border-top: 1px solid grey;
+    border-top: 2px solid grey;
     top: 50%;
     left: 0;
     z-index: -1;
