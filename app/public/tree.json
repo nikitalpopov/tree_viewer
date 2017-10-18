@@ -63,6 +63,27 @@
           "children": []
         }
       ]
+    },
+    {
+      "text": "sub item 1.4 with long long long long long text",
+      "children": [
+        {
+          "text": "sub sub item 1.4.1",
+          "children": []
+        },
+        {
+          "text": "sub sub item 1.4.2",
+          "children": []
+        },
+        {
+          "text": "sub sub item 1.4.3",
+          "children": []
+        },
+        {
+          "text": "sub sub item 1.4.4",
+          "children": []
+        }
+      ]
     }
   ]
 }

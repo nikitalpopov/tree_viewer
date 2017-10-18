@@ -89,8 +89,8 @@ ul::before {
     position: absolute;
     border-top: 1px solid grey;
     top: 50%;
-    left: -12px;
-    width: 12px;
+    left: -17px;
+    width: 17px;
     z-index: -1;
 }
 
@@ -102,32 +102,40 @@ li::before {
     z-index: -1;
 }
 
-/*li::before {*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*border-top: 1px solid grey;*/
-    /*width: 8px;*/
-    /*top: 50%;*/
-    /*z-index: -1;*/
-/*}*/
-
 li:only-child::before {
     display: none;
 }
 
+li:last-child::before,
 li:first-child::before {
+    content: '';
+    position: absolute;
     width: 8px;
+    height: 50%;
+    z-index: -1;
+}
+
+li:first-child::before {
     border-top: 1px solid grey;
     border-radius: 5px 0 0 0;
-    height: 50%;
     top: 50%;
 }
+
 li:last-child::before {
-    width: 8px;
     border-bottom: 1px solid grey;
     border-radius: 0 0 0 5px;
-    height: 50%;
     bottom: 50%;
+}
+
+li:not(:first-child):not(:last-child)::after,
+li:only-child::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    border-top: 1px solid grey;
+    top: 50%;
+    left: 0;
+    z-index: -1;
 }
 
 .tree-text {
