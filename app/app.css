@@ -70,7 +70,6 @@ p {
 
 .node-expander {
     position: relative;
-    bottom: calc(50% - 14px);
     right: 12px;
     margin-right: 5px;
     max-width: 1px;
