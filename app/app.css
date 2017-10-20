@@ -63,8 +63,9 @@ p {
     white-space: normal;
     word-wrap: break-word;
     text-align: justify;
+    padding: 0 4px 0 4px;
     margin-bottom: 18px;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
 }
 
 .node-expander {
@@ -81,7 +82,7 @@ p {
 ul::before {
     content: '';
     position: absolute;
-    border-top: 2px solid grey;
+    border-top: 1px solid grey;
     top: 50%;
     left: -12px;
     width: 12px;
@@ -91,7 +92,7 @@ ul::before {
 li::before {
     content: '';
     position: absolute;
-    border-left: 2px solid grey;
+    border-left: 1px solid grey;
     height: 100%;
     z-index: -1;
 }
@@ -110,17 +111,17 @@ li:first-child::before {
 }
 
 li:first-child::before {
-    border-top: 2px solid grey;
+    border-top: 1px solid grey;
     border-radius: 5px 0 0 0;
     top: 50%;
 }
 
 li:last-child::before {
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
     border-radius: 0 0 0 5px;
-    height: calc(50% + 2px);
+    height: calc(50% + 1px);
     bottom: 50%;
-    margin-bottom: -2px;
+    margin-bottom: -1px;
 }
 
 li:not(:first-child):not(:last-child)::after,
@@ -128,7 +129,7 @@ li:only-child::after {
     content: '';
     position: absolute;
     width: 8px;
-    border-top: 2px solid grey;
+    border-top: 1px solid grey;
     top: 50%;
     left: 0;
     z-index: -1;
