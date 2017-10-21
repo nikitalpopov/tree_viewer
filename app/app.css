@@ -5,11 +5,10 @@ body {
 
 ul {
     position: relative;
-    margin: 0;
+    vertical-align: middle;
     padding: 0;
     list-style: none;
     display: inline-block;
-    vertical-align: middle;
 }
 
 li {
@@ -19,7 +18,8 @@ li {
 }
 
 p {
-    margin: 0;
+    margin: 8px 0;
+    transform: translateY(-9px);
 }
 
 .glyphicon {
@@ -50,21 +50,18 @@ p {
 
 .node {
     display: inline-block;
-    padding: 0 4px -2px 4px;
-    margin: 8px;
+    padding: 0 8px;
 }
 
 .node-text {
     min-width: 5vw;
     max-width: 25vw;
-    display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     overflow: visible;
     white-space: normal;
     word-wrap: break-word;
     text-align: justify;
-    padding: 0 4px 0 4px;
-    margin-bottom: 18px;
+    padding: 0 4px;
     border-bottom: 1px solid grey;
 }
 
