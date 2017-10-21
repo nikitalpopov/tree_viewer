@@ -49,13 +49,14 @@ p {
 }
 
 .node {
+    min-width: 100px;
     display: inline-block;
     padding: 0 8px;
 }
 
 .node-text {
-    min-width: 5vw;
-    max-width: 25vw;
+    min-width: 85px;
+    max-width: 20vw;
     vertical-align: bottom;
     overflow: visible;
     white-space: normal;
