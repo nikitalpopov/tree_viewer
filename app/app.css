@@ -132,6 +132,16 @@ li:only-child::after {
     z-index: -1;
 }
 
+.node-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: calc(50% - 10px);
+    border-left: 1px solid grey;
+    border-radius: 5px;
+}
+
 .tree-text {
     padding-top: 10px;
 }
