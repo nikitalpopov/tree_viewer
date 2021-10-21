@@ -1,6 +1,6 @@
 # Tree viewer
 
-Angular.JS JSON tree viewer app
-Written as first Angular project
+Angular.JS JSON tree viewer app  
+Written as first Angular project  
 
 ![screenshot](./screenshot.png)
